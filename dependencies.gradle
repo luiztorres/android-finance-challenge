@@ -1,6 +1,6 @@
 ext {
     compileSdkVersion = 28
-    applicationId = "com.com.finance.challenge.challenge"
+    applicationId = "com.com.finance.challenge"
     minSdkVersion = 19
     targetSdkVersion = 28
     daggerVersion = "2.21"
