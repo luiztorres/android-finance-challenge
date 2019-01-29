@@ -1,0 +1,28 @@
+#built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# Local configuration file (sdk path, etc)
+local.properties
+store/fabric.properties
+
+# Android Studio
+*.iml
+.idea/
+.gradle/
+build/
+
+#Dolphin
+.directory
+
+# Fastlane dummy files
+fastlane/changelog.txt
+fastlane/README.md
+fastlane/report.xml
+store/new_store.gradle

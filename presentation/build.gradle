@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        applicationId rootProject.ext.applicationId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation project(':data')
+
+    implementation rootProject.ext.kotlin
+    implementation rootProject.ext.appcompat
+    implementation rootProject.ext.design
+    implementation rootProject.ext.support
+    implementation rootProject.ext.constraintLayout
+    implementation rootProject.ext.dagger
+    implementation rootProject.ext.rxBinding
+    kapt rootProject.ext.daggerCompiler
+}

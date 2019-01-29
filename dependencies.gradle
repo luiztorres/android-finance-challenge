@@ -1,0 +1,33 @@
+ext {
+    compileSdkVersion = 28
+    applicationId = "com.com.finance.challenge.challenge"
+    minSdkVersion = 19
+    targetSdkVersion = 28
+    daggerVersion = "2.21"
+    appcompatVersion = "1.0.0"
+    supportVersion = "1.0.0"
+    constraintLayout = "1.1.2"
+    retrofitVersion = "2.5.0"
+    rxJavaVersion = "2.2.6"
+    rxAndroidVersion = "2.1.0"
+    rxRetrofitAdapterVersion = "2.5.0"
+    retrofitLoggingInterceptorVersion = "3.12.1"
+    rxBindingVersion = "2.2.0"
+    gsonVersion = "2.8.5"
+
+    kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    dagger = "com.google.dagger:dagger:$daggerVersion"
+    daggerCompiler = "com.google.dagger:dagger-compiler:$daggerVersion"
+    appcompat = "androidx.appcompat:appcompat:$appcompatVersion"
+    design = "com.google.android.material:material:$supportVersion"
+    support = "androidx.legacy:legacy-support-v4:$supportVersion"
+    constraintLayout = "androidx.constraintlayout:constraintlayout:$constraintLayout"
+    retrofit = "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    retrofitGson = "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    retrofitRxAdapter = "com.squareup.retrofit2:adapter-rxjava2:$rxRetrofitAdapterVersion"
+    retrofitLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:$retrofitLoggingInterceptorVersion"
+    rxJava = "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+    rxAndroid = "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
+    rxBinding = "com.jakewharton.rxbinding2:rxbinding:$rxBindingVersion"
+    gson = "com.google.code.gson:gson:$gsonVersion"
+}

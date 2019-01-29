@@ -1,0 +1,28 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+    }
+}
+
+dependencies {
+    api project(':domain')
+
+    implementation rootProject.ext.kotlin
+    implementation rootProject.ext.retrofit
+    implementation rootProject.ext.retrofitGson
+    implementation rootProject.ext.retrofitRxAdapter
+    api rootProject.ext.retrofitLoggingInterceptor
+    api rootProject.ext.gson
+    api rootProject.ext.rxJava
+    api rootProject.ext.rxAndroid
+    implementation rootProject.ext.dagger
+    kapt rootProject.ext.daggerCompiler
+}
