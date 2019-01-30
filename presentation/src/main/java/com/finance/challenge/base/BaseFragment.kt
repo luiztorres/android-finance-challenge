@@ -21,7 +21,5 @@ abstract class BaseFragment : Fragment(), MvpView {
         return getBaseActivity()?.getApplicationComponent()
     }
 
-    override fun injectDependencies() {
-
-    }
+    abstract override fun injectDependencies()
 }

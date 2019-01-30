@@ -19,7 +19,7 @@ import javax.inject.Singleton
 @Module
 class NetworkModule {
 
-    var baseUrl = "https://glacial-bayou-77287.herokuapp.com/listAccounts"
+    private var baseUrl = "https://glacial-bayou-77287.herokuapp.com/"
 
     @Provides
     @Singleton
@@ -50,7 +50,7 @@ class NetworkModule {
     fun providesRetrofit(gson: Gson, okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder().apply {
             addConverterFactory(GsonConverterFactory.create(gson))
-                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+            addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             baseUrl(baseUrl)
             client(okHttpClient)
         }.build()

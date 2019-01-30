@@ -20,7 +20,5 @@ abstract class BaseActivity : AppCompatActivity(), MvpView {
         return (application as MainApplication).getApplicationComponent()
     }
 
-    override fun injectDependencies() {
-
-    }
+    abstract override fun injectDependencies()
 }

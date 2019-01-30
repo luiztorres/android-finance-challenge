@@ -19,5 +19,6 @@ android {
 dependencies {
     implementation rootProject.ext.kotlin
     implementation rootProject.ext.dagger
+    implementation rootProject.ext.gson
     kapt rootProject.ext.daggerCompiler
 }

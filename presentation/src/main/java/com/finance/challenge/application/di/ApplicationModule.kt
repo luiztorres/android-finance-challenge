@@ -12,8 +12,8 @@ import javax.inject.Singleton
  */
 
 @Module
-class ApplicationModule(var mainApplication: MainApplication) {
-    private val SHARED_PREFERENCES = mainApplication.packageName + "SHARED_PREFERENCE"
+class ApplicationModule(private var mainApplication: MainApplication) {
+    private val preference = mainApplication.packageName + "SHARED_PREFERENCE"
 
     @Provides
     @Singleton
@@ -24,6 +24,6 @@ class ApplicationModule(var mainApplication: MainApplication) {
     @Provides
     @Singleton
     fun providesSharedPreference(): SharedPreferences {
-        return mainApplication.getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE)
+        return mainApplication.getSharedPreferences(preference, Context.MODE_PRIVATE)
     }
 }

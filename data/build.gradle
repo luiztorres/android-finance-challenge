@@ -16,9 +16,9 @@ dependencies {
     api project(':domain')
 
     implementation rootProject.ext.kotlin
-    implementation rootProject.ext.retrofit
-    implementation rootProject.ext.retrofitGson
-    implementation rootProject.ext.retrofitRxAdapter
+    api rootProject.ext.retrofit
+    api rootProject.ext.retrofitGson
+    api rootProject.ext.retrofitRxAdapter
     api rootProject.ext.retrofitLoggingInterceptor
     api rootProject.ext.gson
     api rootProject.ext.rxJava
